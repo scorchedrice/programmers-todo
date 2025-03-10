@@ -1,0 +1,1 @@
+export type WorkStatusType = "SCHEDULED"|"IN_PROGRESS"|"COMPLETED"
