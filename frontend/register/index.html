@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="/public/css/register.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h2>회원가입</h2>
+            <form id="register-form">
+                <input type="text" name="register-id" placeholder="아이디를 입력하세요." required>
+                <input type="password" name="register-passwd" placeholder="비밀번호를 입력하세요." required>
+                <input type="password" name="confirm-passwd" placeholder="비밀번호를 다시 입력하세요." required>
+                <p class="error-message" id="register-error"></p>
+                <button id="register-btn" type="button" onclick="trySignUp()">회원가입</button>
+            </form>
+            <p>이미 계정이 있으신가요? <a href="../login/index.html">로그인</a></p>
+        </div>
+    </div>
+    <script src="/public/js/register.js"></script>
+</body>
+</html>

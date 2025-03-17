@@ -74,11 +74,13 @@ export class WorksService {
   }
 
   // 4. work 생성
-  async createWork(workName: string, workDescription: string) {
+  async createWork(workName: string, workDescription: string, workDueDate: string, workDueTime: string) {
    const work = this.worksRepository.create({
      workName,
      workDescription,
      workStatus: 'SCHEDULED',
+     workDueDate,
+     workDueTime,
    });
    const newWork = await this.worksRepository.save(work);
    return newWork

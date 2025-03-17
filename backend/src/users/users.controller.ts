@@ -7,7 +7,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
-  // 유저 등록
+  // TODO : 직접적으로 요청하는 경우 없도록 해야함. 개선 필요, hash된 비밀번호가 오도록 로직 수정해야함.
   @Post()
   addUser(
     @Body('email')email: string,

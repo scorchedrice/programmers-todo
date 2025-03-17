@@ -21,7 +21,7 @@ export class AuthController {
 
   @Post('token/refresh')
   postTokenRefresh(
-    @Headers('authroization') rawToken: string,) {
+    @Headers('authorization') rawToken: string,) {
     const token = this.authService.extractTokenFromHeader(rawToken, true);
     const newToken = this.authService.rotateToken(token, true);
     return {
@@ -35,7 +35,7 @@ export class AuthController {
     @Body('email') email: string,
     @Body('password')password: string,
   ) {
-    const token = this.authService.extractTokenFromHeader(rawToken, false);
+    const token = this.authService.extractTokenFromHeader(rawToken, false); // basic token
     const credentials = this.authService.decodedBasicToken(token);
     return this.authService.loginWithEmail(credentials);
   }

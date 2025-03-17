@@ -40,10 +40,11 @@ export class UsersService {
 
   // email로 유저 확인하기
   async getUserByEmail(email: string) {
-    return this.usersRepository.findOne({
+    const target = await this.usersRepository.findOne({
       where: {
         email,
       }
     })
+    return target;
   }
 }

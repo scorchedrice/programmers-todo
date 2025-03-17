@@ -17,5 +17,11 @@ export class WorksModel {
   workDescription: string;
 
   @Column()
+  workDueDate: string;
+
+  @Column()
+  workDueTime: string;
+
+  @Column()
   workStatus: WorkStatusType;
 }

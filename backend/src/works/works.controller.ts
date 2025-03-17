@@ -33,8 +33,10 @@ export class WorksController {
   createWork(
     @Body('workName') workName: string,
     @Body('workDescription') workDescription: string,
+    @Body('workDueDate') workDueDate: string,
+    @Body('workDueTime') workDueTime: string,
   ) {
-    return this.worksService.createWork(workName, workDescription);
+    return this.worksService.createWork(workName, workDescription, workDueDate, workDueTime);
   }
 
   @Put(':id')
