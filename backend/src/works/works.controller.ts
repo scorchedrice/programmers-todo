@@ -1,6 +1,16 @@
-import {Controller, Get, Body, Param, Delete, ParseIntPipe, Patch, Post, Put} from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Body,
+  Param,
+  Delete,
+  ParseIntPipe,
+  Patch,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { WorksService } from './works.service';
-import {WorkStatusType} from "../common/types/workTypes";
+import { WorkStatusType } from '../common/types/workTypes';
 
 @Controller('works')
 export class WorksController {
@@ -31,14 +41,13 @@ export class WorksController {
   updateWork(
     @Param('id', ParseIntPipe) id: number,
     @Body('newWorkName') newWorkName?: string,
-    @Body('newWorkDescription')newWorkDescription?: string,
+    @Body('newWorkDescription') newWorkDescription?: string,
   ) {
-    return this.worksService.updateWork(id, newWorkName, newWorkDescription)
+    return this.worksService.updateWork(id, newWorkName, newWorkDescription);
   }
 
   @Delete(':id')
-  deleteWork(
-    @Param('id', ParseIntPipe) id: number) {
-      return this.worksService.deleteWork(id);
+  deleteWork(@Param('id', ParseIntPipe) id: number) {
+    return this.worksService.deleteWork(id);
   }
 }

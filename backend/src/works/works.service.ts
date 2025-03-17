@@ -9,7 +9,7 @@ import {NotFoundError} from "rxjs";
 export class WorksService {
  constructor(
    @InjectRepository(WorksModel)
-   private worksRepository: Repository<WorksModel>,
+   private readonly worksRepository: Repository<WorksModel>,
  ) {}
 
   // 1. 모든 todos 확인하기

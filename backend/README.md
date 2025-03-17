@@ -30,6 +30,8 @@ nest g resource
 
 ## 📌 API
 
+### 📝 works - 해야할 일을 관리하는 API
+
 1. Create work
 - `POST` : `/works`
 - `BODY` - workName : string, workDescription : string 필요
@@ -47,3 +49,7 @@ nest g resource
 
 5. Delete work
 - `DELETE` : `/works/:id`
+
+### 🧑‍🤝‍🧑 users - 회원가입을 담당하는 API
+
+### 🔒 auth - 권한을 확인하는 API
